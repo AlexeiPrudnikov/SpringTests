@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Список книг</title>
+</head>
+<body>
+<h1>Список книг библиотеки</h1>
+<table border="1px">
+    <tr>
+        <th><b>ID</b></th>
+        <th><b>Название</b></th>
+        <th><b>Автор</b></th>
+    </tr>
+    <tr th:each="book: ${books}">
+        <td th:text="${book.getId()}"></td>
+        <td th:text="${book.getName()}"></td>
+        <td th:text="${book.getAuthor()}"></td>
+    </tr>
+</table>
+</body>
+</html>

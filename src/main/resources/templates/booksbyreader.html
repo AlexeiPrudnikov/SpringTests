@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Книги у читателя</title>
+</head>
+<body>
+<h1>Список книг у читателя</h1>
+
+<h2>ID: <span th:text="${reader.getId()}"></span></h2>
+<h2>Фамилия: <span th:text="${reader.getName()}"></span></h2>
+<table border="1px">
+    <tr>
+        <th><b>ID</b></th>
+        <th><b>Название</b></th>
+    </tr>
+    <tr th:each="books: ${books}">
+        <td th:text="${books.getId()}"></td>
+        <td th:text="${books.getName()}"></td>
+    </tr>
+</table>
+</body>
+</html>
